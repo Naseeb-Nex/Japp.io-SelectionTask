@@ -80,8 +80,6 @@ flutter:
   fonts:
       - family: Nunito
         fonts:
-          - asset: assets/fonts/Montserrat-Thin.ttf
-            weight: 100
           - asset: assets/fonts/Nunito-ExtraLight.ttf
             weight: 200
           - asset: assets/fonts/Nunito-Light.ttf
