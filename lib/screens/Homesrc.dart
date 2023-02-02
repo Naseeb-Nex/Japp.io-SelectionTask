@@ -11,6 +11,15 @@ class Homesrc extends StatefulWidget {
 class _HomesrcState extends State<Homesrc> {
   String cal_type = "day"; // calendar type
 
+  // Initial Selected Value Dropdown menu
+  String dpvalue = 'Expense ';
+
+  // List of items in dropdown menu
+  var items = [
+    'Expense ',
+    'Profit ',
+  ];
+
   @override
   Widget build(BuildContext context) {
     // Screen Size
@@ -192,7 +201,53 @@ class _HomesrcState extends State<Homesrc> {
                 ),
               ],
             ),
-          )
+          ),
+          // padding
+          const SizedBox(
+            height: 15,
+          ),
+          // Expense
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: s.width * 0.03),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: white,
+                    border: Border.all(color: gray),
+                  ),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 6),
+                  child: DropdownButton(
+                    isDense: true,
+                    value: dpvalue,
+                    underline: const SizedBox(),
+                    icon: const Icon(Icons.keyboard_arrow_down, color: Color(0XFF6c757d),),
+                    items: items.map((String items) {
+                      return DropdownMenuItem(
+                        value: items,
+                        child: Text(
+                          items,
+                          style: const TextStyle(
+                              fontFamily: "Nunito",
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0XFF7B7B7B)),
+                        ),
+                      );
+                    }).toList(),
+                    onChanged: (String? newValue) {
+                      setState(() {
+                        dpvalue = newValue!;
+                      });
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ),
           // chart
           // list
         ]),
