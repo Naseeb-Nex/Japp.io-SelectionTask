@@ -75,21 +75,20 @@ class _HomesrcState extends State<Homesrc> {
             padding: EdgeInsets.symmetric(horizontal: s.width * 0.03),
             child: Row(
               children: [
-
                 // Day selection
                 Flexible(
                   flex: 1,
                   fit: FlexFit.tight,
                   child: InkWell(
-                    onTap: ()=> setState(() {
+                    onTap: () => setState(() {
                       cal_type = "day";
                     }),
                     child: Container(
                       padding: EdgeInsets.symmetric(vertical: s.height * 0.015),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: cal_type == "day" ? pcolor : white,
-                          ),
+                        borderRadius: BorderRadius.circular(10),
+                        color: cal_type == "day" ? pcolor : white,
+                      ),
                       child: Center(
                         child: Text(
                           "Day",
@@ -110,15 +109,15 @@ class _HomesrcState extends State<Homesrc> {
                   flex: 1,
                   fit: FlexFit.tight,
                   child: InkWell(
-                    onTap: ()=> setState(() {
+                    onTap: () => setState(() {
                       cal_type = "week";
                     }),
                     child: Container(
                       padding: EdgeInsets.symmetric(vertical: s.height * 0.015),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: cal_type == "week" ? pcolor : white,
-                          ),
+                        borderRadius: BorderRadius.circular(10),
+                        color: cal_type == "week" ? pcolor : white,
+                      ),
                       child: Center(
                         child: Text(
                           "Week",
@@ -139,15 +138,15 @@ class _HomesrcState extends State<Homesrc> {
                   flex: 1,
                   fit: FlexFit.tight,
                   child: InkWell(
-                    onTap: ()=> setState(() {
+                    onTap: () => setState(() {
                       cal_type = "month";
                     }),
                     child: Container(
                       padding: EdgeInsets.symmetric(vertical: s.height * 0.015),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: cal_type == "month" ? pcolor : white,
-                          ),
+                        borderRadius: BorderRadius.circular(10),
+                        color: cal_type == "month" ? pcolor : white,
+                      ),
                       child: Center(
                         child: Text(
                           "Month",
@@ -168,15 +167,15 @@ class _HomesrcState extends State<Homesrc> {
                   flex: 1,
                   fit: FlexFit.tight,
                   child: InkWell(
-                    onTap: ()=> setState(() {
+                    onTap: () => setState(() {
                       cal_type = "year";
                     }),
                     child: Container(
                       padding: EdgeInsets.symmetric(vertical: s.height * 0.015),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: cal_type == "year" ? pcolor : white,
-                          ),
+                        borderRadius: BorderRadius.circular(10),
+                        color: cal_type == "year" ? pcolor : white,
+                      ),
                       child: Center(
                         child: Text(
                           "Year",
