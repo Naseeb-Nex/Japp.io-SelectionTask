@@ -67,7 +67,7 @@ class _HomesrcState extends State<Homesrc> {
                     style: TextStyle(
                         color: Colors.black,
                         fontFamily: "Nunito",
-                        fontWeight: FontWeight.w700,
+                        fontWeight: FontWeight.w800,
                         fontSize: 20),
                   ),
                   // Downloads button
@@ -100,7 +100,7 @@ class _HomesrcState extends State<Homesrc> {
                       }),
                       child: Container(
                         padding:
-                            EdgeInsets.symmetric(vertical: s.height * 0.015),
+                            EdgeInsets.symmetric(vertical: s.height * 0.011),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           color: cal_type == "day" ? pcolor : white,
@@ -296,7 +296,7 @@ class _HomesrcState extends State<Homesrc> {
               padding: EdgeInsets.symmetric(horizontal: s.width * 0.04),
               child: Column(
                 children: [
-                  SizedBox(height: s.height * 0.03),
+                  SizedBox(height: s.height * 0.02),
                   // Startbucks card
                   SpendingCard(
                     name: "Starbucks",
