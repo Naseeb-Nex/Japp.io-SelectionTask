@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:japp_io_st/constants/colors.dart';
+import 'package:japp_io_st/components/lineChart.dart';
 
 class Homesrc extends StatefulWidget {
   const Homesrc({Key? key}) : super(key: key);
@@ -249,6 +250,8 @@ class _HomesrcState extends State<Homesrc> {
             ),
           ),
           // chart
+          // Fl chart is used to build the chart
+          const LineChartwidget(),
           // list
         ]),
       )),
