@@ -22,7 +22,7 @@ _A single screen selection task._
 - Bottom navigation bar added with custom animation
 
 ## Result
-<img src="readme_rsc\result.jpg" >
+<img src="readme_rsc\result.png" >
 
 ## Demo
 [clik here](https://drive.google.com/file/d/1cmMCcwzS7c9tk1YBoA6QZwxpBEnGIwaT/view?usp=share_link)
