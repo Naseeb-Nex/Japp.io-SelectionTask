@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:japp_io_st/components/spendingcard.dart';
+import 'package:japp_io_st/components/transfercard.dart';
 import 'package:japp_io_st/constants/colors.dart';
 import 'package:japp_io_st/components/lineChart.dart';
 
@@ -225,7 +227,10 @@ class _HomesrcState extends State<Homesrc> {
                     isDense: true,
                     value: dpvalue,
                     underline: const SizedBox(),
-                    icon: const Icon(Icons.keyboard_arrow_down, color: Color(0XFF6c757d),),
+                    icon: const Icon(
+                      Icons.keyboard_arrow_down,
+                      color: Color(0XFF6c757d),
+                    ),
                     items: items.map((String items) {
                       return DropdownMenuItem(
                         value: items,
@@ -253,6 +258,60 @@ class _HomesrcState extends State<Homesrc> {
           // Fl chart is used to build the chart
           const LineChartwidget(),
           // list
+          SizedBox(height: s.height * 0.04),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: s.width * 0.04),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  "Top Spending",
+                  style: TextStyle(
+                    fontFamily: "Nunito",
+                    fontWeight: FontWeight.w700,
+                    fontSize: 18,
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
+                  width: 15,
+                  child: Image.asset(
+                    "assets/icons/transfer.png",
+                    color: const Color(0XFF7A7A7A),
+                  ),
+                )
+              ],
+            ),
+          ),
+          // Card List
+          Padding(
+            padding:  EdgeInsets.symmetric(horizontal: s.width * 0.04),
+            child: Column(
+              children: [
+                SizedBox(height: s.height * 0.03),
+                SpendingCard(
+                  name: "Starbucks",
+                  img: "assets/images/startbucks.png",
+                  amount: "-\$ 150.00",
+                  date: "Jan 12, 2022",
+                ),
+                SizedBox(height: s.height * 0.02),
+                TransferCard(
+name: "Transfer",
+                  img: "assets/images/avtar.jpg",
+                  amount: "-\$ 85.00",
+                  date: "Yesterday",
+                ),
+                SizedBox(height: s.height * 0.02),
+                SpendingCard(
+                  name: "Youtube",
+                  img: "assets/images/yt.png",
+                  amount: "-\$ 11.99",
+                  date: "Jan 16, 2022",
+                ),
+              ],
+            ),
+          )
         ]),
       )),
     );
